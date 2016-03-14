@@ -11,8 +11,12 @@ import Navigation from '../Navigation';
 function Layout({ children }) {
   return (
     <div className="Layout">
-      <Navigation />
-      {children}
+        <Navigation />
+      <main>
+        <div className='content'>
+          {children}
+        </div>
+      </main>
     </div>
   );
 }

@@ -5,14 +5,17 @@
  */
 
 import React, { Component } from 'react';
+import Submit from  '../components/Submit/Submit.js';
+import List from '../components/List/List.js';
 
 export default class extends Component {
 
   render() {
     return (
       <div>
-        <h1>Home Page</h1>
-        <p>Coming soon.</p>
+        <h1>CfA Dance Party</h1>
+        <Submit />
+        <List />
       </div>
     );
   }

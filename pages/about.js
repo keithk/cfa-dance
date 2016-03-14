@@ -11,8 +11,12 @@ export default class extends Component {
   render() {
     return (
       <div>
-        <h1>About Us</h1>
-        <p>Coming soon.</p>
+        <h1>CfA Dance Party</h1>
+        <p>Submit a youtube video link!</p>
+        <div className='songContainer'>
+          <input type='text' id='song' placeholder="youtube url goes here" />
+          <button type='submit' className='icon' id='submit'>🎉</button>
+        </div>
       </div>
     );
   }

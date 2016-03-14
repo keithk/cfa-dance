@@ -7,6 +7,9 @@
 import path from 'path';
 import webpack from 'webpack';
 import merge from 'lodash.merge';
+var bourbon = require('node-bourbon').includePaths;
+var neat = require("bourbon-neat").includePaths;
+
 
 const DEBUG = !process.argv.includes('release');
 const VERBOSE = process.argv.includes('verbose');
@@ -144,8 +147,7 @@ const appConfig = merge({}, config, {
       }) : JS_LOADER,
       ...config.module.loaders,
       {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader'],
+        test: /\.scss$/, loader: "style!css!sass?includePaths[]=" + bourbon + "&includePaths[]=" + neat
       },
     ],
   },
@@ -176,8 +178,7 @@ const pagesConfig = merge({}, config, {
       JS_LOADER,
       ...config.module.loaders,
       {
-        test: /\.scss$/,
-        loaders: ['css-loader', 'postcss-loader'],
+        test: /\.scss$/, loader: "css!sass?includePaths[]=" + bourbon + "&includePaths[]=" + neat
       },
     ],
   },

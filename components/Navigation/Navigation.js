@@ -9,15 +9,13 @@ import './Navigation.scss';
 import Link from '../Link';
 
 function Navigation() {
+  // <ul className="Navigation" role="menu">
+  //   <li className="Navigation-item">
+  //     <a className="Navigation-link" href="/" onClick={Link.handleClick}>Home</a>
+  //   </li>
+  // </ul>
   return (
-    <ul className="Navigation" role="menu">
-      <li className="Navigation-item">
-        <a className="Navigation-link" href="/" onClick={Link.handleClick}>Home</a>
-      </li>
-      <li className="Navigation-item">
-        <a className="Navigation-link" href="/about" onClick={Link.handleClick}>About</a>
-      </li>
-    </ul>
+    <ul></ul>
   );
 }
 
