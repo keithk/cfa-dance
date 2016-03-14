@@ -24,8 +24,8 @@ export default class extends Component {
         id: youtube_parser(song)
       });
       e.target.song.value = '';
-    }
-    e.target.song.value = 'Invalid Song URL?';
+    } else
+      e.target.song.value = 'Invalid Song URL?'; // This is not really how validation should work 😱
     return;
   }
   render() {
